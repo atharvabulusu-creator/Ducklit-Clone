@@ -9,7 +9,7 @@ const fs = require('fs');
   // Go to site
   await page.goto('https://ducklit.com', { waitUntil: 'networkidle2' });
 
-  // Save rendered HTML
+  // Save rendered HTML snapshot
   const html = await page.content();
   fs.writeFileSync('ducklit_snapshot.html', html);
 
